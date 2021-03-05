@@ -1,0 +1,18 @@
+paths:
+  - src/
+layers:
+  - name: Integration
+    collectors:
+      - type: className
+        regex: .*\\integration\\.*
+  - name: Business
+    collectors:
+      - type: className
+        regex: .*\\business\\.*
+  - name: FeatureTest
+    collectors:
+      - type: implements
+        implements: 'Behat\\Behat\\Context\\Context'
+ruleset:
+  FeatureTest:
+    - Business
