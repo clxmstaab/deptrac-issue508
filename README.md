@@ -20,3 +20,17 @@ https://github.com/clxmstaab/deptrac-issue508/blob/366650d7a1e9a176c8a31ba8f2ff6
 ### actual
 
 no errors, everything green
+
+```
+$ composer deptrac
+> deptrac analyze depfile.yml --report-uncovered --fail-on-uncovered
+
+
+
+Report:
+Violations: 0
+Skipped violations: 0
+Uncovered: 0
+Allowed: 0
+ 3/3 [============================] 100%
+```
