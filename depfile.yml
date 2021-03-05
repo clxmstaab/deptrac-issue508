@@ -4,15 +4,20 @@ layers:
   - name: Integration
     collectors:
       - type: className
-        regex: .*\\integration\\.*
+        regex: ^integration\\.*
   - name: Business
     collectors:
       - type: className
-        regex: .*\\business\\.*
+        regex: ^business\\.*
   - name: FeatureTest
     collectors:
       - type: implements
-        implements: 'Behat\\Behat\\Context\\Context'
+        implements: 'Behat\Behat\Context\Context'
+  - name: Behat
+    collectors:
+      - type: className
+        regex: ^Behat\\.*
 ruleset:
   FeatureTest:
     - Business
+    - Behat
