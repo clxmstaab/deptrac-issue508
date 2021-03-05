@@ -4,6 +4,12 @@
         "behat/behat": "^3.8"
     },
 
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+
     "scripts": {
         "deptrac": [
             "deptrac analyze depfile.yml --report-uncovered --fail-on-uncovered"
