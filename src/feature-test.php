@@ -9,7 +9,11 @@ class TrackingBusinessContext implements Context
      */
     private $i;
 
-    public function myTest() {
+    public function shouldErr() {
         new integration\i1();
+    }
+
+    public function shouldWork() {
+        new \business\b1();
     }
 }
